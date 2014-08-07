@@ -1,0 +1,6 @@
+#
+# robots.txt for YcfCMS
+#
+User-agent: * 
+Allow: /*
+Sitemap:http://www.kcloze.com/sitemap.xml
