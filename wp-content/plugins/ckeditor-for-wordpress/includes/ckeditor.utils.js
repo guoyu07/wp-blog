@@ -1,7 +1,7 @@
 /*
-Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.
-For licensing, see LICENSE.html or http://ckeditor.com/license
-*/
+ Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+ For licensing, see LICENSE.md or http://ckeditor.com/license
+ */
 var	editorCKE;
 jQuery(document).ready(function () {
 	ckeditorSettings.configuration['on'] = {
@@ -14,7 +14,7 @@ jQuery(document).ready(function () {
 				}
 			}
 			evt.editor.config.extraPlugins += (evt.editor.config.extraPlugins ? ','+externals.join(',') : externals.join(','));
-			if (evt.editor.config[evt.editor.config.toolbar +'_removeButtons']);
+			if (evt.editor.config.toolbar && evt.editor.config[evt.editor.config.toolbar +'_removeButtons']);
 				evt.editor.config.removeButtons = evt.editor.config[evt.editor.config.toolbar +'_removeButtons'];
 			CKEDITOR.addCss(evt.editor.config.extraCss);
 		}

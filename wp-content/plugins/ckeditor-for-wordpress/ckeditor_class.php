@@ -1,10 +1,14 @@
 <?php
+/*
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+*/
 
 class ckeditor_wordpress {
 
 	private static $instance;
-	public $version = '4.0.0.1';
-	public $timestamp = 'CBDD';
+	public $version = '4.4.4';
+	public $timestamp = 'E7KC';
 	public $default_options = array();
 	public $options = array();
 	public $ckeditor_path = "";
@@ -450,6 +454,10 @@ class ckeditor_wordpress {
 					$massage['advanced_detect_language_auto'] = __('Enter a valid auto detect language value.', 'ckeditor_wordpress');
 				}
 
+				if (trim($new_options['advanced']['acf']) != 't' && trim($new_options['advanced']['acf'] != 'f')) {
+					$massage['acf'] = __('Enter a valid ACF value.', 'ckeditor_wordpress');
+				}
+
 				if (trim($new_options['advanced']['language_direction']) != 'default' && trim($new_options['advanced']['language_direction']) != 'ltr' && trim($new_options['advanced']['language_direction']) != 'rtl') {
 					$massage['advanced_language_direction'] = __('Enter a valid language direction value.', 'ckeditor_wordpress');
 				}
@@ -677,6 +685,10 @@ class ckeditor_wordpress {
 
 		if (isset($options['advanced']['detect_language_auto']) && $options['advanced']['detect_language_auto'] == 'f') {
 			$settings['language'] = $options['advanced']['language'];
+		}
+
+		if (!isset($options['advanced']['acf']) || $options['advanced']['acf'] == 'f') {
+			$settings['allowedContent'] = true;
 		}
 
 		if (isset($options['advanced']['language_direction'])) {
@@ -1028,6 +1040,12 @@ class ckeditor_wordpress {
 		return $arr;
 		}
 
+  /**
+   * Remove editor-expand script as it only for default WYSIWYG editor
+   */
+  public function deregister_editor_expand(){
+    wp_deregister_script('editor-expand');
+  }
 }
 
 final class _WP_Editors {

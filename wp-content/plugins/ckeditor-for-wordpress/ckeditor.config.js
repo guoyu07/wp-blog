@@ -1,6 +1,6 @@
 /*
-Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.
-For licensing, see LICENSE.html or http://ckeditor.com/license
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
 */
 
 /**
@@ -47,7 +47,7 @@ CKEDITOR.editorConfig = function(config) {
 	];
 
 	// Remove buttons in "WordpressFull" toolbar
-	config.WordpressFull_removeButtons = 'Save,NewPage,Preview,Print,Templates,CreateDiv,PageBreak,Subscript,Superscript,Styles';
+	config.WordpressFull_removeButtons = 'Save,NewPage,Preview,Print,Templates,CreateDiv,PageBreak,Styles';
 
 	//IE: remove border of image when is as a link
 	config.extraCss = "a img { border: 0px\\9; }";
