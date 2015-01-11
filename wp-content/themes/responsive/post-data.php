@@ -1,7 +1,7 @@
 <?php
 
 // Exit if accessed directly
-if( !defined( 'ABSPATH' ) ) {
+if ( !defined( 'ABSPATH' ) ) {
 	exit;
 }
 
@@ -20,11 +20,11 @@ if( !defined( 'ABSPATH' ) ) {
  */
 ?>
 
-<?php if( !is_page() && !is_search() ) { ?>
+<?php if ( !is_page() && !is_search() ) { ?>
 
 	<div class="post-data">
-		<?php the_tags( __( 'Tagged with:', 'responsive' ) . ' ', ', ', '<br />' ); ?>
 		<?php printf( __( 'Posted in %s', 'responsive' ), get_the_category_list( ', ' ) ); ?>
+		<?php the_tags( __( 'Tagged with:', 'responsive' ) . ' ', ', ', '<br />' ); ?>
 	</div><!-- end of .post-data -->
 
 <?php } ?>

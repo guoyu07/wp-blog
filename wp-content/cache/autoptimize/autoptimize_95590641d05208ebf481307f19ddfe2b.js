@@ -1,5 +1,0 @@
-(function(){var nav=document.getElementById('site-navigation'),button,menu;if(!nav){return;}
-button=nav.getElementsByTagName('h3')[0];menu=nav.getElementsByTagName('ul')[0];if(!button){return;}
-if(!menu||!menu.childNodes.length){button.style.display='none';return;}
-button.onclick=function(){if(-1===menu.className.indexOf('nav-menu')){menu.className='nav-menu';}
-if(-1!==button.className.indexOf('toggled-on')){button.className=button.className.replace(' toggled-on','');menu.className=menu.className.replace(' toggled-on','');}else{button.className+=' toggled-on';menu.className+=' toggled-on';}};})();(function($){$('.main-navigation').find('a').on('focus.twentytwelve blur.twentytwelve',function(){$(this).parents('.menu-item, .page_item').toggleClass('focus');});})(jQuery);(function(){var request,b=document.body,c='className',cs='customize-support',rcs=new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');request=true;b[c]=b[c].replace(rcs,' ');b[c]+=(window.postMessage&&request?' ':' no-')+cs;}());
