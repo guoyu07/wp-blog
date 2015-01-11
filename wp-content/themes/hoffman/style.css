@@ -255,6 +255,7 @@ body a,
 	margin: 2.5% auto 0;
 	position: relative;
 	left: 0;
+	overflow:hidden;
 }
 
 .wrapper:after {
