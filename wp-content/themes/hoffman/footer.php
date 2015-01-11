@@ -102,6 +102,15 @@
 </div> <!-- /credits -->
 
 <?php wp_footer(); ?>
-
+<!-- /百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4c0a24615850dc11ed69ab5eb6bef093";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </body>
 </html>
