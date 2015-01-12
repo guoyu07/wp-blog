@@ -2,7 +2,7 @@
 
 	<div class="footer">
 			
-		<div class="section-inner">
+		<div class="section-inner thin">
 		
 			<?php if ( is_active_sidebar( 'footer-a' ) ) : ?>
 			
