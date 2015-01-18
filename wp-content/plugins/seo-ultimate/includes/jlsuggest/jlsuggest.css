@@ -31,7 +31,7 @@ input.jls_loading {
 
 .jls_text_dest_text .type {
 	color: #666;
-	font-variant: small-caps;
+	/* font-variant: small-caps; */
 	font-size: smaller;
 }
 
